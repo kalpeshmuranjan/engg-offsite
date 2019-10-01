@@ -6,5 +6,6 @@ import lombok.Data;
 public class Message {
     private String messageId;
     private String fromUser;
+    private String content;
     private long   timeStamp;
 }
