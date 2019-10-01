@@ -17,7 +17,6 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List <Message> listMessages (String fromId) {
-        connectionPool.getConnection()
         return null;
     }
 
