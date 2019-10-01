@@ -1,0 +1,21 @@
+{
+  "GetMessage": {
+    "method": "get/post",
+    "base_uri": "https://xxx.gupshup.io",
+    "base_path": "msg",
+    "content-type": "application/x-www-form-urlencoded//multipart/form-data",
+    "query_params": {
+      "from": ""
+    }
+  },
+  "PostMessage": {
+    "method": "get/post",
+    "base_uri": "https://xxx.gupshup.io",
+    "base_path": "msg",
+    "content-type": "application/x-www-form-urlencoded//multipart/form-data",
+    "query_params": {
+      "from": "",
+      "msg": ""
+    }
+  }
+}
