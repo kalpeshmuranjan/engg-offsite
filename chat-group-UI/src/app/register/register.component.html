@@ -1,0 +1,14 @@
+<div class="register-form">
+  <form [formGroup]="registerGroup">
+    <h3 class="text-center">Register</h3>
+    <div class="form-group">
+      <input type="text" id="chat-username-input" formControlName="chatUsername" class="form-control chat-username" placeholder="Username" required="required">
+      <p class="red text-center" *ngIf="registerError">{{registerErrorMsg}}</p>
+    </div>
+    <div class="form-group">
+      <button type="button" id="chat-register-btn" class="btn btn-primary btn-block aggregrator-btn-login" (click)="registerUser();">Register</button>
+
+    </div>
+  </form>
+  <p class="text-center"><a href="#">Welcome to Chat Group</a></p>
+</div>

@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+.register-form {
+  width: 340px;
+  margin: 50px auto;
+}
+
+.register-form form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.register-form h3 {
+  margin: 0 0 15px;
+}
+
+.form-control,
+.btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body>.container {
+  padding: 60px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer>.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.senders-list-cls td {
+  vertical-align: middle !important;
+}
+
+.sender-name-cls,
+.aggregrator-logout {
+  cursor: pointer;
+}
+
+.chart-loader {
+  background-image: url(assets/images/loader.gif);
+  height: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.red {
+  color: red;
+  margin-top: 2px;
+}
+
+.text-center {
+  text-align: center;
+}
