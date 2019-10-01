@@ -56,6 +56,23 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public Message sendMessage (User user, String messageContent) {
-        return null;
+        
+    	Message message = null;
+    	try {
+    		message = new Message().messageId(System.currentTimeMillis()).fromUser(user.userName())
+    				.content(messageContent).timeStamp(System.currentTimeMillis());
+    		Connection con = connectionPool.getConnection();
+    		PreparedStatement pstm = con.prepareStatement("insert into msgtable values (?,?,?,?)");
+    		pstm.setLong(1, message.messageId());
+    		pstm.setString(2, message.fromUser());
+    		pstm.setString(3, message.content());
+    		pstm.setLong(4, message.timeStamp());
+    		
+    		int row = pstm.executeUpdate();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    	}
+    	
+    	return message;
     }
 }
