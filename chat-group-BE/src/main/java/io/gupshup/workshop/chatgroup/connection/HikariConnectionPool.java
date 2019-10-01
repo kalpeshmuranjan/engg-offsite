@@ -35,15 +35,10 @@ public class HikariConnectionPool {
             hikariConfig.addDataSourceProperty("reportMetricsIntervalMillis", 30000);
         }
 
-        this.instantiateMetricRegistry(hikariConfig);
         this.instantiateDataSource(hikariConfig);
     }
 
 
-    private void instantiateMetricRegistry (HikariConfig hikariConfig) {
-        MetricRegistry metricRegistry = new MetricRegistry();
-        hikariConfig.setMetricRegistry(metricRegistry);
-    }
 
 
     private void instantiateDataSource (HikariConfig hikariConfig) {
@@ -57,7 +52,6 @@ public class HikariConnectionPool {
     }
 
 
-    @Override
     public Connection getConnection () {
         try {
             synchronized (HikariConnectionPool.class) {
@@ -73,7 +67,6 @@ public class HikariConnectionPool {
     }
 
 
-    @Override
     public void shutdown () {
         synchronized (HikariConnectionPool.class) {
             if (this.hikariDataSource != null && !this.hikariDataSource.isClosed()) {
