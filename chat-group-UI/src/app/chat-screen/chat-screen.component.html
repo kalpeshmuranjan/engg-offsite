@@ -1,3 +1,46 @@
-<p>
-  chat-screen works!
-</p>
+ <div class='chat-wrapper'>
+   <div class='chat-message padding'>
+     <div class='chat-message chat-message-recipient'>
+       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
+       <div class='chat-message-wrapper'>
+         <div class='chat-message-content'>
+           <p>Sushi tonight?</p>
+         </div>
+         <div class='chat-details'>
+           <span class='chat-message-localization font-size-small'>Yesterday</span>
+         </div>
+       </div>
+     </div>
+     <div class='chat-message chat-message-recipient'>
+       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
+       <div class='chat-message-wrapper'>
+         <div class='chat-message-content'>
+           <p>Done. Delivery takes 5 minutes!</p>
+         </div>
+         <div class='chat-details'>
+           <span class='chat-message-localisation font-size-small'>Now</span>
+         </div>
+       </div>
+     </div>
+     <div class='chat-message chat-message-sender'>
+       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
+
+       <div class='chat-message-wrapper'>
+         <div class='chat-message-content'>
+           <p>Awesome! See you later! :) </p>
+         </div>
+         <div class='chat-details'>
+           <span class='chat-message-localization font-size-small'>Today</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="post-message-wrap">
+   <form [formGroup]="chatGroup">
+     <textarea id="postMessage" row="2" formControlName="chatMessage">
+
+    </textarea>
+     <button type="submit" class="btn btn-primary" (click)="sendMessage();">Send</button>
+   </form>
+ </div>

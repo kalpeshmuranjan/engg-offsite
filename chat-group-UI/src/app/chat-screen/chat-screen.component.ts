@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-chat-screen',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatScreenComponent implements OnInit {
 
-  constructor() { }
+  chatGroup: FormGroup;
+  constructor(
+    private _formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
+
+
+    this.chatGroup = this._formBuilder.group({
+      chatMessage: [null, Validators.required]
+    });
+
+  }
+
+  sendMessage() {
+
   }
 
 }
