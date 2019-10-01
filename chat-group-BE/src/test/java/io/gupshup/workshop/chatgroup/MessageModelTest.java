@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class MessageModelTest {
 
-    private static final String MESSAGE_ID = "123";
+    private static final long MESSAGE_ID   = 123L;
     private static final String FROM_USER  = "testUser";
     private static final String CONTENT    = "content";
     private static final long   TIMESTAMP  = 123L;
@@ -19,7 +19,7 @@ public class MessageModelTest {
 
         assertNotNull(message);
 
-        assertNull(message.messageId());
+        assertEquals(0L, message.messageId());
         message.messageId(MESSAGE_ID);
         assertEquals(MESSAGE_ID, message.messageId());
 
