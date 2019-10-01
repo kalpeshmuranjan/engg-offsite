@@ -1,0 +1,4 @@
+01-Oct-2019 15:15:21 [INFO] (InitTest.java:46) - io.gupshup.auto.soip.custom.CustomKeywordUtils will be used for Custom Keywords
+01-Oct-2019 15:15:21 [INFO] (InitTest.java:57) - io.gupshup.auto.soip.custom.APIPlaceHolderImplementation will be used for Custom PlaceHolder
+01-Oct-2019 15:15:22 [INFO] (InitTest.java:126) - Dynamic TestNG execution started
+01-Oct-2019 15:15:22 [INFO] (GupshupCustomReportListener.java:109) - Send Report flag is false
