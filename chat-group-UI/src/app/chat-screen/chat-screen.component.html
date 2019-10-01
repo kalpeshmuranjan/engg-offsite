@@ -1,39 +1,26 @@
  <div class='chat-wrapper'>
    <div class='chat-message padding'>
-     <div class='chat-message chat-message-recipient'>
-       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
-       <div class='chat-message-wrapper'>
-         <div class='chat-message-content'>
-           <p>Sushi tonight?</p>
-         </div>
-         <div class='chat-details'>
-           <span class='chat-message-localization font-size-small'>Yesterday</span>
-         </div>
-       </div>
-     </div>
-     <div class='chat-message chat-message-recipient'>
-       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
-       <div class='chat-message-wrapper'>
-         <div class='chat-message-content'>
-           <p>Done. Delivery takes 5 minutes!</p>
-         </div>
-         <div class='chat-details'>
-           <span class='chat-message-localisation font-size-small'>Now</span>
-         </div>
-       </div>
-     </div>
-     <div class='chat-message chat-message-sender'>
-       <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
 
-       <div class='chat-message-wrapper'>
-         <div class='chat-message-content'>
-           <p>Awesome! See you later! :) </p>
+     <div *ngFor="let item of chatMessages">
+
+       <div class="chat-message" [ngClass]="{'chat-message-sender': username.toLowerCase().trim() === item.fromUser,
+                                             'chat-message-recipient': username.toLowerCase().trim() !== item.fromUser }">
+
+         <img class='chat-image chat-image-default' src='https://placebear.com/75/75' />
+         <div class='chat-message-wrapper'>
+           <div class='chat-message-content'>
+             <p>{{item.content}}</p>
+           </div>
+           <div class='chat-details'>
+             <span class='chat-message-localization font-size-small'>{{item.timeStamp | date : 'h:mm:ss a'}}</span>
+           </div>
          </div>
-         <div class='chat-details'>
-           <span class='chat-message-localization font-size-small'>Today</span>
-         </div>
+
        </div>
+
      </div>
+
+
    </div>
  </div>
  <div class="post-message-wrap">
