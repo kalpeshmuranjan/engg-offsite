@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Message {
-    private String messageId;
+    private long   messageId;
     private String fromUser;
     private String content;
     private long   timeStamp;

@@ -33,7 +33,7 @@ public class MessageRoute {
             @QueryParam("fromId")
             @DefaultValue
                     ("")
-                    String fromId) {
+                    Long fromId) {
         final List <Message> messages = messageService.listMessages(fromId);
         return new SuccessResponse().addJsonElement("messages", Constants.GSON.toJsonTree(messages)).build();
     }

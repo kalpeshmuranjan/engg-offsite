@@ -6,7 +6,7 @@ import io.gupshup.workshop.chatgroup.models.User;
 import java.util.List;
 
 public interface MessageService {
-    List <Message> listMessages (String fromId);
+    List <Message> listMessages (Long fromId);
 
     Message sendMessage (User user, String messageContent);
 }

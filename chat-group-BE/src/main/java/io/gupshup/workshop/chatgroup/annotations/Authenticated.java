@@ -1,6 +1,7 @@
 package io.gupshup.workshop.chatgroup.annotations;
 
 import io.gupshup.workshop.chatgroup.authentication.Authenticator;
+import io.gupshup.workshop.chatgroup.authentication.impl.PassThroughAuthenticator;
 
 import javax.ws.rs.NameBinding;
 import java.lang.annotation.ElementType;
